@@ -2,7 +2,7 @@
 version: '3'
 services:
   api:
-    image: idealpostcodes/postcodes.io:latest
+    image: svbailey/ua_api_v1
     depends_on:
       - db
     environment:
@@ -13,7 +13,7 @@ services:
     ports:
       - 8000:8000
   db:
-    image: idealpostcodes/postcodes.io.db:latest
+    image: svbailey/ua_db_v1
     environment:
       - POSTGRES_DB=postcodesiodb
       - POSTGRES_PASSWORD=secret
