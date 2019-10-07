@@ -17,4 +17,5 @@ module.exports = {
   Place: require("./place"),
   TerminatedPostcode: require("./terminated_postcode"),
   Ced: require("./ced"),
+  Politics: require("./politics"),
 };

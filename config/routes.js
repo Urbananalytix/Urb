@@ -39,4 +39,6 @@ module.exports = app => {
   app.get("/terminated_postcodes/:postcode", terminatedPostcodes.show);
 
   app.get("/scotland/postcodes/:postcode", scottishPostcodes.show);
+
+  app.get("/politics", politics.query);
 };
