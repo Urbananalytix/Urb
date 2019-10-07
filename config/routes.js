@@ -7,6 +7,7 @@ const outcodes = require("../app/controllers/outcodes_controller");
 const postcodes = require("../app/controllers/postcodes_controller");
 const scottishPostcodes = require("../app/controllers/scottish_postcodes_controller");
 const terminatedPostcodes = require("../app/controllers/terminated_postcodes_controller");
+const Politics = require("../app/controllers/politics_controller");
 
 module.exports = app => {
   app.get("/", pages.home);
@@ -40,5 +41,6 @@ module.exports = app => {
 
   app.get("/scotland/postcodes/:postcode", scottishPostcodes.show);
 
-  app.get("/politics", politics.query);
+  app.get("/politics/:postcode", Politics.show);
+  
 };
