@@ -7,7 +7,6 @@ const async = require("async");
 const Pc = require("postcode");
 
 const PoliticsSchema = {
-    id: "SERIAL PRIMARY KEY",
     postcode:	"varchar",
     pc_compact:	"varchar",
     brexitleave: "numeric",
