@@ -11,12 +11,12 @@ exports.show = (request, response, next) => {
 	const { postcode } = request.params;
 	if (!new Pc(postcode.trim()).valid()) return next(new InvalidPostcodeError());
 	
-	terminatedPostcode.find(postcode, (error, result) => {
+	Politics.find(postcode, (error, result) => {
 		if (error) return next(error);
     if (!result) return next(new TPostcodeNotFoundError());   
     response.jsonApiResponse = {
       status: 200,
-      result: terminatedPostcode.toJson(result)
+      result: Politics.toJson(result)
     };
     return next();
 	});
