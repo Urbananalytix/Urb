@@ -42,5 +42,7 @@ module.exports = app => {
   app.get("/scotland/postcodes/:postcode", scottishPostcodes.show);
 
   app.get("/politics/:postcode", Politics.show);
+
+  app.get("/demographics/:postcode", Demographics.show);
   
 };
