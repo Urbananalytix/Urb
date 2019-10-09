@@ -8,6 +8,7 @@ const postcodes = require("../app/controllers/postcodes_controller");
 const scottishPostcodes = require("../app/controllers/scottish_postcodes_controller");
 const terminatedPostcodes = require("../app/controllers/terminated_postcodes_controller");
 const Politics = require("../app/controllers/politics_controller");
+const Demographics = require("../app/controllers/demographics_controller");
 
 module.exports = app => {
   app.get("/", pages.home);
